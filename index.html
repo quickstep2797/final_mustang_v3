@@ -1,0 +1,69 @@
+<html lang="en">
+<!--
+	Author: Stephanie Quick
+	Program: Mustang v3
+	Class: Web Programming
+	Date: 22 November 2019
+-->
+<head>
+	<meta charset="UTF-8">
+    <title>Mustang</title>
+	<link rel="stylesheet" href="mustang.css">
+</head>
+
+<body onload="initApplication()">  
+    <h1>Mustang V3</h1>  
+	<button type="button" onclick="importContacts()">Import Contacts</button><br><br>
+	<button type="button" onclick="saveServer()">Save Contacts</button>
+	<button type="button" onclick="loadServer()">Load Contacts</button>
+	<br><br>
+	<div id="section1">
+	<table>
+		<tr>
+			<td>Name:</td>
+			<td> 				
+				<input id="nameID" type="text" value="" size="20">
+			</td>
+		</tr>
+		<tr>
+			<td>Email:</td>
+			<td>
+				<input id="emailID" type="text" value="" size="20">
+			</td>
+		</tr>
+		<tr>
+			<td>City:</td>
+			<td>
+				<input id="cityID" type="text" value="" size="20">
+			</td>
+		</tr>
+		<tr>
+			<td>State:</td>
+			<td>
+				<input id="stateID" type="text" value="" size="20" onkeypress="keyPressed()">
+			</td>
+		</tr>
+		<tr>
+			<td>Zip</td>
+			<td>
+				<input id="zipID" type="text" value="" size="20" onblur="zipBlurFunction()">
+			</td>
+		</tr>
+		<tr>
+			<td><button type="button" id="pre" onclick="previous()">Previous</button></td>
+			<td><button type="button" id="next" autofocus onclick="next()">Next</button>
+			</td>
+		<tr>
+			<td><button type="button" onclick="add()">New</button></td>
+			<td><button type="button" onclick="removeIt()">Delete</button>
+		</td>
+		</tr>
+	</table>
+	</div>
+	
+	<script src="mustang.js"></script>
+	<p id="statusID"></p>
+	<br><br><hr>
+	Index:<p id="indexID"></p>
+</body>
+</html>
